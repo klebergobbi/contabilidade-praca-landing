@@ -2,28 +2,27 @@ import { process } from "@/content/site";
 
 export function Process() {
   return (
-    <section className="bg-graphite-900 py-20 text-white sm:py-24">
+    <section className="bg-graphite-900 py-20 text-white sm:py-28">
       <div className="container">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-[2rem] font-semibold tracking-tighter sm:text-[2.75rem]">
             {process.title}
           </h2>
-          <p className="mt-4 text-lg text-white/70">{process.subtitle}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xl leading-snug text-white/60">
+            {process.subtitle}
+          </p>
         </div>
 
-        <ol className="mt-12 grid gap-6 md:grid-cols-3">
+        <ol className="mx-auto mt-14 grid max-w-5xl gap-12 md:grid-cols-3">
           {process.steps.map((step) => (
-            <li
-              key={step.number}
-              className="relative rounded-xl border border-graphite-600 bg-graphite-700/70 p-7"
-            >
-              <span className="tnum font-display text-4xl font-bold tracking-tight text-gold/40">
+            <li key={step.number} className="text-center md:text-left">
+              <span className="tnum font-display text-[15px] font-semibold tracking-tight text-gold">
                 {step.number}
               </span>
-              <h3 className="mt-3 font-display text-xl font-semibold">
+              <h3 className="mt-3 text-[22px] font-semibold tracking-tight">
                 {step.title}
               </h3>
-              <p className="mt-2 leading-relaxed text-white/70">
+              <p className="mt-2 text-[17px] leading-normal text-white/65">
                 {step.description}
               </p>
             </li>

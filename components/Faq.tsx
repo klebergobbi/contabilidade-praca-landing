@@ -3,26 +3,30 @@ import { faq } from "@/content/site";
 
 export function Faq() {
   return (
-    <section id="duvidas" className="bg-white py-20 sm:py-24">
+    <section id="duvidas" className="bg-white py-20 sm:py-28">
       <div className="container max-w-3xl">
         <div className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-graphite-900 sm:text-4xl">
+          <h2 className="font-display text-[2rem] font-semibold tracking-tighter text-ink sm:text-[2.75rem]">
             {faq.title}
           </h2>
-          <p className="mt-4 text-lg text-ink">{faq.subtitle}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xl leading-snug text-inkmute">
+            {faq.subtitle}
+          </p>
         </div>
 
-        <div className="mt-10 divide-y divide-graphite-700/10 rounded-2xl border border-graphite-700/10">
+        <div className="mt-12 divide-y divide-hairline border-y border-hairline">
           {faq.items.map((item) => (
-            <details key={item.question} className="group px-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-display text-lg font-semibold text-graphite-900 [&::-webkit-details-marker]:hidden">
+            <details key={item.question} className="group">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[19px] font-semibold tracking-tight text-ink [&::-webkit-details-marker]:hidden">
                 {item.question}
                 <Plus
-                  className="h-5 w-5 shrink-0 text-gold-600 transition-transform duration-200 group-open:rotate-45"
+                  className="h-5 w-5 shrink-0 text-gold-700 transition-transform duration-200 group-open:rotate-45"
                   aria-hidden
                 />
               </summary>
-              <p className="pb-5 leading-relaxed text-ink">{item.answer}</p>
+              <p className="pb-5 text-[17px] leading-normal text-inkmute">
+                {item.answer}
+              </p>
             </details>
           ))}
         </div>

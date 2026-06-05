@@ -2,30 +2,19 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { MessageCircle } from "lucide-react";
 import { nav, hero, business } from "@/content/site";
-import { WhatsAppCta } from "@/components/WhatsAppCta";
-import { cn } from "@/lib/utils";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { trackLead } from "@/lib/tracking";
 
+/**
+ * Global nav no modelo Apple: barra near-black fina, links discretos,
+ * UI que recua para o conteúdo falar. CTA único de WhatsApp à direita.
+ */
 export function Header() {
-  const [scrolled, setScrolled] = React.useState(false);
-
-  React.useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-40 w-full transition-colors duration-300",
-        scrolled
-          ? "border-b border-white/10 bg-graphite-900/95 backdrop-blur"
-          : "bg-transparent",
-      )}
-    >
-      <div className="container flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 w-full border-b border-white/5 bg-graphite-950/85 backdrop-blur-md backdrop-saturate-150">
+      <div className="container flex h-12 items-center justify-between gap-4">
         <a href="#topo" className="flex items-center" aria-label={business.name}>
           <Image
             src="/logo-contabilidade-praca.png"
@@ -33,30 +22,33 @@ export function Header() {
             width={317}
             height={117}
             priority
-            className="h-9 w-auto sm:h-10"
+            className="h-7 w-auto"
           />
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {nav.links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/80 transition-colors hover:text-gold"
+              className="text-[13px] tracking-tight text-white/70 transition-colors hover:text-white"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <WhatsAppCta
-          source="whatsapp_header"
-          message={hero.whatsappMessage}
-          size="sm"
-          className="shrink-0"
+        <a
+          href={buildWhatsAppUrl(hero.whatsappMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackLead("whatsapp_header")}
+          className="inline-flex h-8 items-center gap-1.5 rounded-full bg-gold px-4 text-[13px] font-medium tracking-tight text-graphite-900 transition-transform active:scale-95"
         >
-          {nav.ctaLabel}
-        </WhatsAppCta>
+          <MessageCircle className="h-4 w-4" aria-hidden />
+          <span className="hidden sm:inline">{nav.ctaLabel}</span>
+          <span className="sm:hidden">WhatsApp</span>
+        </a>
       </div>
     </header>
   );

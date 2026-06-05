@@ -8,19 +8,27 @@
     -webkit-text-size-adjust: 100%;
   }
 
-  /* display = peso firme + tracking negativo (modelo Binance:
-     "confia no tamanho e na voltagem do amarelo, não no peso") */
-  .font-display {
-    letter-spacing: -0.02em;
+  body {
+    @apply bg-white text-ink antialiased;
+    /* corpo a 17px (cadência de leitura Apple), Inter aproxima a SF Pro com ss03 */
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.01em;
+    font-feature-settings: "ss03", "cv05";
+    text-rendering: optimizeLegibility;
   }
 
-  /* figuras tabulares para números/dados — DNA financeiro */
+  /* display = peso 600 + tracking negativo ("Apple tight") */
+  .font-display {
+    letter-spacing: -0.022em;
+  }
+
+  /* figuras tabulares para números/dados */
   .tnum {
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
   }
 
-  /* respeita usuários que preferem menos movimento */
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -34,8 +42,7 @@
     }
   }
 
-  /* offset para âncoras não ficarem sob o header sticky */
   :target {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 4rem;
   }
 }

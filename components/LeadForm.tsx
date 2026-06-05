@@ -59,7 +59,7 @@ export function LeadForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-whatsapp/30 bg-white p-8 text-center shadow-soft">
+      <div className="rounded-[18px] bg-white p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-whatsapp" aria-hidden />
         <h3 className="mt-4 font-display text-xl font-semibold text-graphite-900">
           {leadForm.successTitle}
@@ -73,7 +73,7 @@ export function LeadForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="rounded-2xl bg-white p-6 shadow-soft sm:p-8"
+      className="rounded-[18px] bg-white p-6 sm:p-8"
     >
       <h3 className="font-display text-2xl font-semibold text-graphite-900">
         {leadForm.title}

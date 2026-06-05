@@ -1,34 +1,36 @@
 import Image from "next/image";
-import { CheckCircle2, MapPin, Star } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { about, business, images } from "@/content/site";
 
 export function About() {
   return (
-    <section id="sobre" className="bg-white py-20 sm:py-24">
-      <div className="container grid gap-12 lg:grid-cols-2 lg:items-center">
+    <section id="sobre" className="bg-white py-20 sm:py-28">
+      <div className="container grid gap-14 lg:grid-cols-2 lg:items-center">
         <div>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-graphite-900 sm:text-4xl">
+          <h2 className="font-display text-[2rem] font-semibold tracking-tighter text-ink sm:text-[2.75rem]">
             {about.title}
           </h2>
           {about.paragraphs.map((p, i) => (
-            <p key={i} className="mt-5 text-lg leading-relaxed text-ink">
+            <p key={i} className="mt-5 text-[19px] leading-normal text-inkmute">
               {p}
             </p>
           ))}
 
-          <ul className="mt-7 space-y-3">
+          <ul className="mt-8 space-y-3">
             {about.highlights.map((h) => (
-              <li key={h} className="flex items-center gap-3 text-graphite-900">
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-gold-600" aria-hidden />
-                <span className="font-medium">{h}</span>
+              <li key={h} className="flex items-center gap-3 text-[17px] text-ink">
+                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold/15 text-gold-700">
+                  <Check className="h-4 w-4" aria-hidden />
+                </span>
+                {h}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Foto real de atendimento (TODO go-live: foto do escritório/equipe) */}
+        {/* foto real descansando na superfície com a sombra única (TODO: foto do escritório) */}
         <div className="relative">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] shadow-image">
             <Image
               src={images.about.src}
               alt={images.about.alt}
@@ -36,25 +38,13 @@ export function About() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-gradient-to-t from-graphite-900/70 via-graphite-900/10 to-transparent"
-            />
-            <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 p-6 text-white">
-              <MapPin className="h-4 w-4 shrink-0 text-gold" aria-hidden />
-              <span className="text-sm font-medium">{business.address.full}</span>
-            </div>
           </div>
-
-          {/* selo de nota Google sobreposto */}
-          <div className="absolute -right-3 -top-4 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-soft sm:-right-5">
+          <div className="absolute -bottom-4 left-6 flex items-center gap-2 rounded-full border border-black/5 bg-white/90 px-4 py-2.5 shadow-soft backdrop-blur-md">
             <Star className="h-5 w-5 fill-gold text-gold" aria-hidden />
-            <div className="leading-tight">
-              <span className="tnum block font-display text-lg font-bold text-graphite-900">
-                {business.google.rating}
-              </span>
-              <span className="text-[11px] text-ink">no Google</span>
-            </div>
+            <span className="tnum text-[15px] font-semibold text-ink">
+              {business.google.rating}
+            </span>
+            <span className="text-[13px] text-inkmute">no Google</span>
           </div>
         </div>
       </div>
