@@ -62,6 +62,22 @@ export const nav = {
   ctaLabel: "Falar no WhatsApp",
 } as const;
 
+/**
+ * Imagens do site. Fotos atuais são stock licenciado (Unsplash) como
+ * referência profissional. TODO go-live: substituir por fotos reais do
+ * escritório/equipe da Contabilidade Praça em Floriano-PI.
+ */
+export const images = {
+  hero: {
+    src: "/images/hero-consultoria.jpg",
+    alt: "Contadores da Contabilidade Praça em atendimento, comemorando resultado com cliente",
+  },
+  about: {
+    src: "/images/sobre-atendimento.jpg",
+    alt: "Atendimento próximo da Contabilidade Praça: consultora orientando cliente",
+  },
+} as const;
+
 export const hero = {
   eyebrow: "Contabilidade em Floriano-PI · +20 anos",
   headline: "Sua empresa no regime certo, sem dor de cabeça com o fisco",

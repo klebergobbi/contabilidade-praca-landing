@@ -9,7 +9,7 @@ export function TrustBar() {
             key={item.label}
             className="flex flex-col items-center px-2 text-center text-graphite-900"
           >
-            <span className="font-display text-2xl font-bold sm:text-3xl">
+            <span className="tnum font-display text-2xl font-bold tracking-tight sm:text-3xl">
               {item.value}
             </span>
             <span className="mt-1 text-xs font-medium leading-tight sm:text-sm">

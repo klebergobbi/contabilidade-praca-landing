@@ -37,6 +37,7 @@ const config: Config = {
         },
         // Neutros
         cloud: "#F5F6F8",
+        cream: "#FBF4E2", // interlúdio quente (modelo Stripe), em tom dourado
         ink: "#4A4F57",
         // CTA
         whatsapp: {
@@ -47,6 +48,12 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
+      },
+      letterSpacing: {
+        // assinatura tipográfica (modelo Stripe): tracking negativo no display
+        tightest: "-0.04em",
+        tighter: "-0.03em",
+        tight: "-0.02em",
       },
       boxShadow: {
         soft: "0 4px 24px -8px rgba(14, 17, 22, 0.12)",

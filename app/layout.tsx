@@ -1,21 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import { seo, business } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { LgpdBanner } from "@/components/LgpdBanner";
 import "./globals.css";
 
+/**
+ * Família única Inter (modelo Stripe): substituta open-source da Sohne.
+ * Display usa a mesma família com peso/tracking diferenciados via classes.
+ */
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-display",
   display: "swap",
 });
 
@@ -63,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${sora.variable}`}>
+    <html lang="pt-BR" className={inter.variable}>
       <body>
         {children}
         <JsonLd />

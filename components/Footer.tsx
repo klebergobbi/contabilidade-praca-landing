@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Instagram, MapPin, Phone, MessageCircle } from "lucide-react";
 import { footer, business, nav } from "@/content/site";
 
@@ -8,14 +9,13 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-graphite-900 text-white">
       <div className="container grid gap-10 py-14 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-gold font-display text-lg font-bold text-graphite-900">
-              CP
-            </span>
-            <span className="font-display text-base font-semibold leading-tight">
-              Contabilidade <span className="text-gold">Praça</span>
-            </span>
-          </div>
+          <Image
+            src="/logo-contabilidade-praca.png"
+            alt={business.name}
+            width={317}
+            height={117}
+            className="h-11 w-auto"
+          />
           <p className="mt-4 max-w-xs text-sm text-white/65">{footer.tagline}</p>
           <p className="mt-3 text-xs text-white/45">CNPJ {business.cnpj}</p>
           {business.crc && (

@@ -17,7 +17,7 @@ export function Process() {
               key={step.number}
               className="relative rounded-2xl border border-white/10 bg-graphite-800/60 p-7"
             >
-              <span className="font-display text-4xl font-bold text-gold/40">
+              <span className="tnum font-display text-4xl font-bold tracking-tight text-gold/40">
                 {step.number}
               </span>
               <h3 className="mt-3 font-display text-xl font-semibold">

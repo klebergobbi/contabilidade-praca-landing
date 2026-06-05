@@ -1,5 +1,6 @@
-import { CheckCircle2, MapPin, Building2 } from "lucide-react";
-import { about, business } from "@/content/site";
+import Image from "next/image";
+import { CheckCircle2, MapPin, Star } from "lucide-react";
+import { about, business, images } from "@/content/site";
 
 export function About() {
   return (
@@ -25,18 +26,34 @@ export function About() {
           </ul>
         </div>
 
-        {/* Placeholder visual até chegar a foto real da fachada/equipe (TODO) */}
+        {/* Foto real de atendimento (TODO go-live: foto do escritório/equipe) */}
         <div className="relative">
-          <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-graphite-900 shadow-soft">
-            <div className="flex h-full flex-col justify-end gap-3 bg-[radial-gradient(circle_at_top_right,_rgba(242,183,5,0.25),_transparent_60%)] p-8 text-white">
-              <Building2 className="h-10 w-10 text-gold" aria-hidden />
-              <p className="font-display text-2xl font-semibold">
-                {business.name}
-              </p>
-              <p className="flex items-center gap-2 text-white/75">
-                <MapPin className="h-4 w-4 text-gold" aria-hidden />
-                {business.address.full}
-              </p>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
+            <Image
+              src={images.about.src}
+              alt={images.about.alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-graphite-900/70 via-graphite-900/10 to-transparent"
+            />
+            <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 p-6 text-white">
+              <MapPin className="h-4 w-4 shrink-0 text-gold" aria-hidden />
+              <span className="text-sm font-medium">{business.address.full}</span>
+            </div>
+          </div>
+
+          {/* selo de nota Google sobreposto */}
+          <div className="absolute -right-3 -top-4 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-soft sm:-right-5">
+            <Star className="h-5 w-5 fill-gold text-gold" aria-hidden />
+            <div className="leading-tight">
+              <span className="tnum block font-display text-lg font-bold text-graphite-900">
+                {business.google.rating}
+              </span>
+              <span className="text-[11px] text-ink">no Google</span>
             </div>
           </div>
         </div>
