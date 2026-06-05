@@ -77,7 +77,20 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container flex flex-col gap-3 py-6 text-[12px] text-white/40">
           <p>{footer.disclaimer}</p>
-          <p>{footer.rightsTemplate.replace("{year}", String(year))}</p>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <p>{footer.rightsTemplate.replace("{year}", String(year))}</p>
+            <p>
+              {footer.developer.label}{" "}
+              <a
+                href={footer.developer.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-white/60 transition-colors hover:text-gold"
+              >
+                {footer.developer.name}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -337,4 +337,9 @@ export const footer = {
   // Disclaimer de compliance (segmento sensível)
   disclaimer:
     "As informações desta página têm caráter informativo. Cada caso é avaliado individualmente e todo serviço é prestado em conformidade com a legislação vigente.",
+  developer: {
+    label: "Desenvolvido por",
+    name: "Lumentech Solutions",
+    url: "https://www.lumentechsolutions.com.br",
+  },
 } as const;
