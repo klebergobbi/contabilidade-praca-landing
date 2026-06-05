@@ -15,8 +15,7 @@ export function About() {
 
       <div className="container relative grid gap-16 lg:grid-cols-2 lg:items-center">
         <div>
-          <span className="eyebrow">{about.eyebrow}</span>
-          <h2 className="mt-4 max-w-xl font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
+          <h2 className="max-w-xl font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
             {about.title}
           </h2>
           {about.paragraphs.map((p, i) => (

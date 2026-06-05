@@ -6,8 +6,7 @@ export function Faq() {
     <section id="duvidas" className="bg-cream-lifted py-24 sm:py-32">
       <div className="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <span className="eyebrow">{faq.eyebrow}</span>
-          <h2 className="mt-4 max-w-xs font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
+          <h2 className="max-w-xs font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
             {faq.title}
           </h2>
           <p className="mt-4 max-w-sm text-[18px] leading-relaxed text-slate">

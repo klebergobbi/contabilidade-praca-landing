@@ -25,8 +25,7 @@ export function Services() {
     <section id="servicos" className="bg-cream py-24 sm:py-32">
       <div className="container">
         <div className="max-w-2xl">
-          <span className="eyebrow">{services.eyebrow}</span>
-          <h2 className="mt-4 font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
+          <h2 className="font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
             {services.title}
           </h2>
           <p className="mt-4 text-[18px] leading-relaxed text-slate">

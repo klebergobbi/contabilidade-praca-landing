@@ -6,8 +6,7 @@ export function Testimonials() {
     <section id="depoimentos" className="bg-cream py-24 sm:py-32">
       <div className="container">
         <div className="max-w-2xl">
-          <span className="eyebrow">{testimonials.eyebrow}</span>
-          <h2 className="mt-4 font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
+          <h2 className="font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
             {testimonials.title}
           </h2>
           <p className="mt-4 text-[18px] leading-relaxed text-slate">
