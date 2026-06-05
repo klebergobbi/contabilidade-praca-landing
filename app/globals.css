@@ -9,21 +9,31 @@
   }
 
   body {
-    @apply bg-white text-ink antialiased;
-    /* corpo a 17px (cadência de leitura Apple), Inter aproxima a SF Pro com ss03 */
-    font-size: 17px;
-    line-height: 1.47;
-    letter-spacing: -0.01em;
-    font-feature-settings: "ss03", "cv05";
+    /* canvas creme quente (modelo Mastercard), nunca branco puro */
+    @apply bg-cream text-ink antialiased;
+    /* corpo no peso 450, a assinatura suave da MarkForMC/Sofia Sans */
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 1.4;
     text-rendering: optimizeLegibility;
   }
 
-  /* display = peso 600 + tracking negativo ("Apple tight") */
+  /* títulos: peso 500 + tracking negativo (-2%), densidade editorial */
   .font-display {
-    letter-spacing: -0.022em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
-  /* figuras tabulares para números/dados */
+  /* eyebrow: dot + label uppercase com tracking +4% */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-eyebrow text-ink;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-2 w-2 rounded-pill bg-gold;
+  }
+
+  /* figuras tabulares para números */
   .tnum {
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
@@ -43,6 +53,6 @@
   }
 
   :target {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 6rem;
   }
 }

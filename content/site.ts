@@ -98,6 +98,7 @@ export const trustBar = {
 } as const;
 
 export const services = {
+  eyebrow: "Serviços",
   title: "Como a gente resolve a sua contabilidade",
   subtitle:
     "Tudo o que a sua empresa precisa para ficar em dia, no regime mais vantajoso permitido pela legislação.",
@@ -145,6 +146,7 @@ export const services = {
 } as const;
 
 export const audience = {
+  eyebrow: "Para quem",
   title: "Para quem é a Contabilidade Praça",
   subtitle:
     "Se você está em um destes momentos, a gente já ajudou dezenas de empresas iguais à sua.",
@@ -173,6 +175,7 @@ export const audience = {
 } as const;
 
 export const process = {
+  eyebrow: "Como funciona",
   title: "Começar é simples",
   subtitle: "Três passos e a sua contabilidade já fica em boas mãos.",
   steps: [
@@ -198,6 +201,7 @@ export const process = {
 } as const;
 
 export const about = {
+  eyebrow: "Quem somos",
   title: "Mais de 20 anos cuidando da contabilidade de Floriano",
   paragraphs: [
     "A Contabilidade Praça é um escritório de Floriano-PI fundado em 2006. Em mais de duas décadas, construímos uma reputação baseada em atendimento próximo, responsabilidade e clareza, reconhecida pela nota 5,0 no Google.",
@@ -213,6 +217,7 @@ export const about = {
 } as const;
 
 export const testimonials = {
+  eyebrow: "Depoimentos",
   title: "Quem confia na Contabilidade Praça",
   subtitle: "Nota 5,0 no Google, com avaliações de clientes reais.",
   // TODO: substituir pelos depoimentos reais extraídos do Google.
@@ -240,6 +245,7 @@ export const testimonials = {
 } as const;
 
 export const faq = {
+  eyebrow: "Dúvidas",
   title: "Perguntas frequentes",
   subtitle: "Se a sua dúvida não estiver aqui, é só chamar no WhatsApp.",
   items: [

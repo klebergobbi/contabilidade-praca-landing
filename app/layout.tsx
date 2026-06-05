@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Sofia_Sans } from "next/font/google";
 import { seo, business } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
@@ -7,10 +7,11 @@ import { LgpdBanner } from "@/components/LgpdBanner";
 import "./globals.css";
 
 /**
- * Família única Inter (modelo Stripe): substituta open-source da Sohne.
- * Display usa a mesma família com peso/tracking diferenciados via classes.
+ * Sofia Sans (modelo Mastercard): substituta open-source da MarkForMC,
+ * geométrica e editorial. Variável, usamos peso 450 no corpo e 500 nos
+ * títulos com tracking negativo (-2%).
  */
-const inter = Inter({
+const sofia = Sofia_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0E1116",
+  themeColor: "#141413",
   width: "device-width",
   initialScale: 1,
 };
@@ -60,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={sofia.variable}>
       <body>
         {children}
         <JsonLd />

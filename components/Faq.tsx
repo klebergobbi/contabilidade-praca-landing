@@ -3,28 +3,28 @@ import { faq } from "@/content/site";
 
 export function Faq() {
   return (
-    <section id="duvidas" className="bg-white py-20 sm:py-28">
-      <div className="container max-w-3xl">
-        <div className="text-center">
-          <h2 className="font-display text-[2rem] font-semibold tracking-tighter text-ink sm:text-[2.75rem]">
+    <section id="duvidas" className="bg-cream-lifted py-24 sm:py-32">
+      <div className="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <span className="eyebrow">{faq.eyebrow}</span>
+          <h2 className="mt-4 max-w-xs font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
             {faq.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-xl leading-snug text-inkmute">
+          <p className="mt-4 max-w-sm text-[18px] leading-relaxed text-slate">
             {faq.subtitle}
           </p>
         </div>
 
-        <div className="mt-12 divide-y divide-hairline border-y border-hairline">
+        <div className="divide-y divide-ink/10 border-t border-ink/10">
           {faq.items.map((item) => (
             <details key={item.question} className="group">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[19px] font-semibold tracking-tight text-ink [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-display text-[20px] tracking-tight text-ink [&::-webkit-details-marker]:hidden">
                 {item.question}
-                <Plus
-                  className="h-5 w-5 shrink-0 text-gold-700 transition-transform duration-200 group-open:rotate-45"
-                  aria-hidden
-                />
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-pill border-[1.5px] border-ink transition-transform duration-200 group-open:rotate-45">
+                  <Plus className="h-4 w-4 text-ink" aria-hidden />
+                </span>
               </summary>
-              <p className="pb-5 text-[17px] leading-normal text-inkmute">
+              <p className="pb-6 text-[16px] leading-relaxed text-slate">
                 {item.answer}
               </p>
             </details>

@@ -59,9 +59,9 @@ export function LeadForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-[18px] bg-white p-8 text-center">
+      <div className="rounded-[40px] bg-white p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-whatsapp" aria-hidden />
-        <h3 className="mt-4 font-display text-xl font-semibold text-graphite-900">
+        <h3 className="mt-4 font-display text-xl font-semibold text-ink">
           {leadForm.successTitle}
         </h3>
         <p className="mt-2 text-ink">{leadForm.successMessage}</p>
@@ -73,16 +73,16 @@ export function LeadForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="rounded-[18px] bg-white p-6 sm:p-8"
+      className="rounded-[40px] bg-white p-7 sm:p-9"
     >
-      <h3 className="font-display text-2xl font-semibold text-graphite-900">
+      <h3 className="font-display text-2xl font-semibold text-ink">
         {leadForm.title}
       </h3>
-      <p className="mt-2 text-ink">{leadForm.subtitle}</p>
+      <p className="mt-2 text-slate">{leadForm.subtitle}</p>
 
       <div className="mt-6 space-y-4">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-graphite-900">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
             {leadForm.fields.name.label}
           </label>
           <Input
@@ -98,7 +98,7 @@ export function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="whatsapp" className="mb-1.5 block text-sm font-medium text-graphite-900">
+          <label htmlFor="whatsapp" className="mb-1.5 block text-sm font-medium text-ink">
             {leadForm.fields.whatsapp.label}
           </label>
           <Input
@@ -116,7 +116,7 @@ export function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-graphite-900">
+          <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-ink">
             {leadForm.fields.subject.label}
           </label>
           <Select id="subject" aria-invalid={!!errors.subject} {...register("subject")}>
@@ -135,7 +135,7 @@ export function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-graphite-900">
+          <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">
             {leadForm.fields.message.label}
           </label>
           <Textarea
@@ -156,7 +156,7 @@ export function LeadForm() {
         <p className="mt-4 text-sm text-red-600">{leadForm.errorMessage}</p>
       )}
 
-      <Button type="submit" variant="gold" size="lg" className="mt-6 w-full" disabled={isSubmitting}>
+      <Button type="submit" variant="ink" size="lg" className="mt-6 w-full" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
             <Loader2 className="h-5 w-5 animate-spin" aria-hidden />
@@ -167,7 +167,7 @@ export function LeadForm() {
         )}
       </Button>
 
-      <p className="mt-3 text-center text-xs text-ink">{leadForm.consent}</p>
+      <p className="mt-3 text-center text-xs text-slate">{leadForm.consent}</p>
     </form>
   );
 }

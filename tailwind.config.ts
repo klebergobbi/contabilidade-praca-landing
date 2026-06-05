@@ -11,17 +11,27 @@ const config: Config = {
       center: true,
       padding: {
         DEFAULT: "1.5rem",
-        sm: "1.75rem",
-        lg: "2.5rem",
+        lg: "3rem",
       },
       screens: {
-        "2xl": "1120px",
+        "2xl": "1280px",
       },
     },
     extend: {
       colors: {
-        // Marca — dourado amostrado do Instagram (#F7BA2D).
-        // Único acento de ação (modelo Apple: uma só cor interativa).
+        // Superfícies quentes (modelo Mastercard): nunca branco puro
+        cream: {
+          DEFAULT: "#F3F0EE", // canvas
+          lifted: "#FCFBFA", // superfície elevada
+          ghost: "#E8E2DA", // watermark creme-sobre-creme
+        },
+        // Near-black quente para CTAs, texto e rodapé
+        ink: {
+          DEFAULT: "#141413",
+          soft: "#262627",
+        },
+        slate: "#696969", // texto secundário muted
+        // Dourado da marca — ocupa o papel do acento (dots, arcos, indicadores)
         gold: {
           DEFAULT: "#F7BA2D",
           50: "#FEF7E2",
@@ -31,47 +41,33 @@ const config: Config = {
           600: "#F0B90B",
           700: "#C99100",
         },
-        // Superfícies escuras (tiles Apple), em near-black
-        graphite: {
-          DEFAULT: "#1D1D1F",
-          950: "#000000", // void / global nav
-          900: "#1D1D1F", // ink + tile escuro principal
-          800: "#272729", // tile escuro 1
-          700: "#2A2A2C", // tile escuro 2
-          600: "#3A3A3C", // hairline sobre escuro
-        },
-        // Neutros claros (modelo Apple)
-        cloud: "#F5F5F7", // parchment (off-white de alternância)
-        cream: "#FAFAFC", // pearl (superfície secundária)
-        ink: "#1D1D1F", // texto near-black (nunca preto puro)
-        inkmute: "#6E6E73", // texto secundário
-        hairline: "#E0E0E0", // borda 1px
-        // CTA WhatsApp (exigência da marca — único verde)
+        // CTA WhatsApp (único verde, exigência da marca)
         whatsapp: {
           DEFAULT: "#25D366",
           dark: "#1EBE5A",
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "-apple-system", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
+        sans: ["var(--font-sans)", "Sofia Sans", "system-ui", "sans-serif"],
+        display: ["var(--font-sans)", "Sofia Sans", "system-ui", "sans-serif"],
       },
       letterSpacing: {
-        // assinatura "Apple tight": tracking negativo no display
+        // headlines editoriais Mastercard: -2%
         tightest: "-0.03em",
-        tighter: "-0.022em",
-        tight: "-0.014em",
-      },
-      boxShadow: {
-        // a ÚNICA sombra do sistema Apple: sob imagens/produtos
-        image: "0 3px 30px 0 rgba(0, 0, 0, 0.22)",
-        // sombra suave para o raro card flutuante (badges)
-        soft: "0 6px 24px -10px rgba(0, 0, 0, 0.25)",
+        tighter: "-0.02em",
+        tight: "-0.015em",
+        eyebrow: "0.04em", // +4% nas eyebrows uppercase
       },
       borderRadius: {
-        md: "11px",
-        lg: "18px",
-        "2xl": "1.25rem",
+        btn: "20px", // CTAs do corpo (raio assinatura)
+        stadium: "40px", // molduras de mídia / containers grandes
+        pill: "999px", // pílulas, nav, chips
+      },
+      boxShadow: {
+        // sombras atmosféricas (spread largo, baixa opacidade)
+        navpill: "0 4px 24px 0 rgba(0, 0, 0, 0.05)",
+        card: "0 24px 48px 0 rgba(0, 0, 0, 0.08)",
+        feature: "0 40px 90px 0 rgba(0, 0, 0, 0.18)",
       },
       keyframes: {
         "fade-up": {

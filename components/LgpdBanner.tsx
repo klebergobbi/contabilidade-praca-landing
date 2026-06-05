@@ -24,14 +24,14 @@ export function LgpdBanner() {
     <div
       role="dialog"
       aria-label="Aviso de privacidade"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-2xl border border-graphite-700/15 bg-white p-5 shadow-soft sm:inset-x-5 sm:p-6"
+      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-[28px] border border-ink/10 bg-white p-5 shadow-card sm:inset-x-5 sm:p-6"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-ink">
           {lgpd.text}{" "}
           <a
             href={lgpd.policyHref}
-            className="font-medium text-graphite-900 underline underline-offset-2 hover:text-gold-600"
+            className="font-medium text-ink underline underline-offset-2 hover:text-gold-700"
           >
             {lgpd.policyLabel}
           </a>
