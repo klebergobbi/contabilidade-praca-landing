@@ -48,7 +48,7 @@ export const seo = {
   title: "Contabilidade em Floriano-PI | Contabilidade Praça",
   description:
     "Escritório de contabilidade em Floriano-PI com +20 anos e nota 5,0 no Google. Abertura de empresa, troca de contador, MEI, Simples Nacional e planejamento tributário dentro da lei. Fale agora no WhatsApp.",
-  ogImageAlt: "Contabilidade Praça — contabilidade em Floriano-PI",
+  ogImageAlt: "Contabilidade Praça, contabilidade em Floriano-PI",
 } as const;
 
 export const nav = {
@@ -70,27 +70,20 @@ export const nav = {
 export const images = {
   hero: {
     src: "/images/hero-consultoria.jpg",
-    alt: "Contadores da Contabilidade Praça em atendimento, comemorando resultado com cliente",
+    alt: "Análise de documentos e números no escritório da Contabilidade Praça",
   },
   about: {
     src: "/images/sobre-atendimento.jpg",
-    alt: "Atendimento próximo da Contabilidade Praça: consultora orientando cliente",
+    alt: "Profissional da Contabilidade Praça cuidando da papelada e das obrigações do cliente",
   },
 } as const;
 
 export const hero = {
-  eyebrow: "Contabilidade em Floriano-PI · +20 anos",
   headline: "Sua empresa no regime certo, sem dor de cabeça com o fisco",
   subheadline:
     "A Contabilidade Praça cuida da abertura, da troca de contador e do dia a dia fiscal da sua empresa com atendimento próximo e planejamento tributário dentro da lei.",
   ctaPrimary: "Falar agora no WhatsApp",
   ctaSecondary: "Pedir uma proposta",
-  // chips de prova rápida abaixo do CTA
-  proofChips: [
-    "Nota 5,0 no Google",
-    "+20 anos de mercado",
-    "Atendimento humano e direto",
-  ],
   whatsappMessage:
     "Olá! Vim pela página da Contabilidade Praça e quero falar sobre a contabilidade da minha empresa.",
 } as const;
@@ -116,7 +109,7 @@ export const services = {
       icon: "Rocket",
       title: "Abertura de empresa",
       description:
-        "CNPJ aberto do jeito certo, com o enquadramento e as atividades adequadas ao seu negócio — sem retrabalho lá na frente.",
+        "CNPJ aberto do jeito certo, com o enquadramento e as atividades adequadas ao seu negócio, sem retrabalho lá na frente.",
     },
     {
       icon: "ArrowLeftRight",
@@ -174,7 +167,7 @@ export const audience = {
     {
       title: "Profissional liberal e prestador de serviço",
       description:
-        "Médico, dentista, engenheiro, advogado, consultor — quem precisa do regime certo para não pagar imposto a mais.",
+        "Médico, dentista, engenheiro, advogado ou consultor que precisa do regime certo para não pagar imposto a mais.",
     },
   ],
 } as const;
@@ -207,7 +200,7 @@ export const process = {
 export const about = {
   title: "Mais de 20 anos cuidando da contabilidade de Floriano",
   paragraphs: [
-    "A Contabilidade Praça é um escritório de Floriano-PI fundado em 2006. Em mais de duas décadas, construímos uma reputação baseada em atendimento próximo, responsabilidade e clareza — reconhecida pela nota 5,0 no Google.",
+    "A Contabilidade Praça é um escritório de Floriano-PI fundado em 2006. Em mais de duas décadas, construímos uma reputação baseada em atendimento próximo, responsabilidade e clareza, reconhecida pela nota 5,0 no Google.",
     "Sob a direção de Rômulo de Oliveira Praça e Andrea Alves Sousa Praça, atendemos empresas de diversos portes e segmentos, sempre com o mesmo compromisso: deixar a sua empresa em dia, no regime certo e sem complicação.",
   ],
   highlights: [
@@ -263,7 +256,7 @@ export const faq = {
     {
       question: "Vocês ajudam a escolher o melhor regime tributário?",
       answer:
-        "Sim. Analisamos o seu faturamento e a sua atividade para indicar o enquadramento mais vantajoso permitido pela legislação — sempre dentro da lei, com planejamento tributário transparente.",
+        "Sim. Analisamos o seu faturamento e a sua atividade para indicar o enquadramento mais vantajoso permitido pela legislação, sempre dentro da lei, com planejamento tributário transparente.",
     },
     {
       question: "Sou MEI e cresci. Preciso mudar alguma coisa?",
@@ -273,7 +266,7 @@ export const faq = {
     {
       question: "Quanto custa a contabilidade da minha empresa?",
       answer:
-        "Depende do porte e da atividade. Por isso preferimos avaliar o seu caso antes de passar um valor — assim a proposta é justa e sem surpresa. Chame no WhatsApp para receber uma proposta.",
+        "Depende do porte e da atividade. Por isso preferimos avaliar o seu caso antes de passar um valor, assim a proposta é justa e sem surpresa. Chame no WhatsApp para receber uma proposta.",
     },
   ],
 } as const;

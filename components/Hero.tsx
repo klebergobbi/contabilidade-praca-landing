@@ -11,12 +11,8 @@ import { WhatsAppCta } from "@/components/WhatsAppCta";
 export function Hero() {
   return (
     <section id="topo" className="bg-white">
-      <div className="container flex flex-col items-center px-6 pt-16 text-center sm:pt-20 lg:pt-24">
-        <span className="text-[15px] font-semibold tracking-tight text-gold-700">
-          {hero.eyebrow}
-        </span>
-
-        <h1 className="mx-auto mt-3 max-w-4xl font-display text-[2.5rem] font-semibold leading-[1.06] tracking-tighter text-ink sm:text-[3.25rem] lg:text-[4rem]">
+      <div className="container flex flex-col items-center px-6 pt-20 text-center sm:pt-24 lg:pt-28">
+        <h1 className="mx-auto max-w-4xl font-display text-[2.5rem] font-semibold leading-[1.06] tracking-tighter text-ink sm:text-[3.25rem] lg:text-[4rem]">
           Sua empresa no <span className="text-gold-600">regime certo</span>, sem
           dor de cabeça com o fisco
         </h1>
@@ -61,7 +57,7 @@ export function Hero() {
                   {business.google.rating}
                 </span>
                 <span className="text-[13px] text-inkmute">
-                  · {business.google.reviews} avaliações no Google
+                  em {business.google.reviews} avaliações no Google
                 </span>
               </div>
             </div>

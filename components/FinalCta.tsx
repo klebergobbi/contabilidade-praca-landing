@@ -29,11 +29,11 @@ export function FinalCta() {
           <dl className="space-y-5 text-[17px]">
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-gold" aria-hidden />
-              <dd>
+              <dd className="flex flex-wrap items-center gap-x-2">
                 <a href={business.phone.landlineHref} className="hover:text-gold">
                   {business.phone.landline}
-                </a>{" "}
-                <span className="text-white/60">· WhatsApp {business.phone.whatsappDisplay}</span>
+                </a>
+                <span className="text-white/60">WhatsApp {business.phone.whatsappDisplay}</span>
               </dd>
             </div>
             <div className="flex items-center gap-3">

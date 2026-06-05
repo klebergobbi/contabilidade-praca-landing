@@ -38,7 +38,7 @@ function appendCampaign(message: string): string {
   const entries = Object.entries(campaign);
   if (entries.length === 0) return message;
   const suffix = entries.map(([k, v]) => `${k}: ${v}`).join(" | ");
-  return `${message}\n\n— origem: ${suffix}`;
+  return `${message}\n\n(origem: ${suffix})`;
 }
 
 /**
