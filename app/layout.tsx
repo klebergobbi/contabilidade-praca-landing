@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Sofia_Sans } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import { seo, business } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
@@ -7,11 +7,18 @@ import { LgpdBanner } from "@/components/LgpdBanner";
 import "./globals.css";
 
 /**
- * Sofia Sans (modelo Mastercard): substituta open-source da MarkForMC,
- * geométrica e editorial. Variável, usamos peso 450 no corpo e 500 nos
- * títulos com tracking negativo (-2%).
+ * Stack de duas famílias (modelo Revolut):
+ * - Sora (geométrica) para o display, substituta da Aeonik Pro, pesos 500/600
+ *   em tamanhos gigantes com tracking negativo e line-height 1.0
+ * - Inter para corpo, botões e legendas (peso 400/600), tracking levemente positivo
  */
-const sofia = Sofia_Sans({
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -50,7 +57,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#141413",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -61,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={sofia.variable}>
+    <html lang="pt-BR" className={`${sora.variable} ${inter.variable}`}>
       <body>
         {children}
         <JsonLd />

@@ -59,7 +59,7 @@ export function LeadForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-[40px] bg-white p-8 text-center">
+      <div className="rounded-lg bg-white p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-whatsapp" aria-hidden />
         <h3 className="mt-4 font-display text-xl font-semibold text-ink">
           {leadForm.successTitle}
@@ -73,12 +73,12 @@ export function LeadForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="rounded-[40px] bg-white p-7 sm:p-9"
+      className="rounded-lg bg-white p-7 sm:p-9"
     >
       <h3 className="font-display text-2xl font-semibold text-ink">
         {leadForm.title}
       </h3>
-      <p className="mt-2 text-slate">{leadForm.subtitle}</p>
+      <p className="mt-2 text-ink-mute">{leadForm.subtitle}</p>
 
       <div className="mt-6 space-y-4">
         <div>
@@ -156,7 +156,7 @@ export function LeadForm() {
         <p className="mt-4 text-sm text-red-600">{leadForm.errorMessage}</p>
       )}
 
-      <Button type="submit" variant="ink" size="lg" className="mt-6 w-full" disabled={isSubmitting}>
+      <Button type="submit" variant="dark" size="lg" className="mt-6 w-full" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
             <Loader2 className="h-5 w-5 animate-spin" aria-hidden />
@@ -167,7 +167,7 @@ export function LeadForm() {
         )}
       </Button>
 
-      <p className="mt-3 text-center text-xs text-slate">{leadForm.consent}</p>
+      <p className="mt-3 text-center text-xs text-ink-mute">{leadForm.consent}</p>
     </form>
   );
 }

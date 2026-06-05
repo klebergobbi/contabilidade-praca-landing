@@ -5,7 +5,6 @@ import {
   FileText,
   Users,
   MessageSquareText,
-  ArrowUpRight,
   type LucideIcon,
 } from "lucide-react";
 import { services } from "@/content/site";
@@ -22,39 +21,32 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Services() {
   return (
-    <section id="servicos" className="bg-cream py-24 sm:py-32">
-      <div className="container">
+    <section id="servicos" className="bg-canvas-dark text-white">
+      <div className="container py-20 sm:py-28">
         <div className="max-w-2xl">
-          <h2 className="font-display text-4xl tracking-tighter text-ink sm:text-[2.9rem]">
+          <h2 className="font-display text-[2.5rem] leading-[1.05] tracking-tighter text-white sm:text-[3.25rem]">
             {services.title}
           </h2>
-          <p className="mt-4 text-[18px] leading-relaxed text-slate">
+          <p className="mt-5 max-w-xl text-[18px] leading-relaxed text-white/72">
             {services.subtitle}
           </p>
         </div>
 
-        <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {services.items.map((item, i) => {
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.items.map((item) => {
             const Icon = iconMap[item.icon] ?? FileText;
             return (
-              <article key={item.title} className="group flex flex-col items-center text-center sm:items-start sm:text-left">
-                {/* portrait circular com satélite (seta) */}
-                <div className="relative">
-                  <div className="grid h-32 w-32 place-items-center rounded-pill bg-cream-lifted shadow-card transition-transform duration-300 group-hover:-translate-y-1">
-                    <Icon className="h-12 w-12 text-gold-700" strokeWidth={1.5} aria-hidden />
-                  </div>
-                  <span className="absolute -bottom-1 -right-1 grid h-11 w-11 place-items-center rounded-pill border-[3px] border-cream bg-ink text-cream transition-colors group-hover:bg-gold group-hover:text-ink">
-                    <ArrowUpRight className="h-5 w-5" aria-hidden />
-                  </span>
-                </div>
-
-                <span className="mt-6 text-[12px] font-bold uppercase tracking-eyebrow text-gold-700">
-                  0{i + 1}
+              <article
+                key={item.title}
+                className="rounded-lg bg-surface-elevated p-8 transition-colors hover:bg-[#1c1f22]"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-gold/15 text-gold">
+                  <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                 </span>
-                <h3 className="mt-1 font-display text-[22px] tracking-tight text-ink">
+                <h3 className="mt-6 font-display text-[22px] tracking-tight text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 max-w-xs text-[16px] leading-relaxed text-slate">
+                <p className="mt-2.5 text-[16px] leading-relaxed text-white/65">
                   {item.description}
                 </p>
               </article>
@@ -62,8 +54,8 @@ export function Services() {
           })}
         </div>
 
-        <div className="mt-20 flex flex-col items-center gap-4 rounded-stadium bg-ink px-8 py-12 text-center sm:flex-row sm:justify-between sm:text-left">
-          <p className="max-w-md font-display text-[26px] leading-tight tracking-tight text-cream">
+        <div className="mt-16 flex flex-col items-start gap-5 rounded-xl bg-surface-elevated p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+          <p className="max-w-md font-display text-[26px] leading-tight tracking-tight text-white">
             Não sabe por onde começar? A gente te orienta.
           </p>
           <WhatsAppCta

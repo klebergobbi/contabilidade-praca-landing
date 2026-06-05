@@ -24,7 +24,7 @@ export function LgpdBanner() {
     <div
       role="dialog"
       aria-label="Aviso de privacidade"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-[28px] border border-ink/10 bg-white p-5 shadow-card sm:inset-x-5 sm:p-6"
+      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-[28px] border border-ink/10 bg-white p-5 sm:inset-x-5 sm:p-6"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-ink">
@@ -37,7 +37,7 @@ export function LgpdBanner() {
           </a>
         </p>
         <div className="flex shrink-0 gap-2">
-          <Button variant="outline" size="sm" onClick={() => decide("denied")}>
+          <Button variant="outlineLight" size="sm" onClick={() => decide("denied")}>
             {lgpd.reject}
           </Button>
           <Button variant="gold" size="sm" onClick={() => decide("granted")}>

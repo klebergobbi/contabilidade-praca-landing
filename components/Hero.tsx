@@ -4,25 +4,22 @@ import { hero, business, images } from "@/content/site";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
 
 /**
- * Hero em duas colunas (modelo Mastercard): texto + CTAs à esquerda,
- * foto em moldura "stadium" (40px) à direita, com portrait circular da
- * nota do Google e arco dourado decorativo. Canvas creme.
+ * Hero (modelo Revolut): banda true black, headline GIGANTE (Sora 600,
+ * tracking negativo, line-height apertado) à esquerda, foto full-bleed à
+ * direita em moldura rounded-xl. Dourado como acento escasso.
  */
 export function Hero() {
   return (
-    <section
-      id="topo"
-      className="relative overflow-hidden bg-cream pb-24 pt-32 sm:pt-36"
-    >
-      <div className="container grid gap-12 lg:grid-cols-2 lg:items-center">
-        {/* esquerda: texto + CTAs */}
+    <section id="topo" className="bg-canvas-dark text-white">
+      <div className="container grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
+        {/* esquerda: headline + CTAs */}
         <div className="animate-fade-up">
-          <h1 className="max-w-xl font-display text-[2.5rem] leading-[1.03] tracking-tighter text-ink sm:text-[3.1rem] lg:text-[3.6rem]">
-            Sua empresa no <span className="text-gold-700">regime certo</span>,
-            sem dor de cabeça com o fisco
+          <h1 className="font-display text-[3.25rem] leading-[0.98] tracking-tightest text-white sm:text-[4.25rem] lg:text-[4.75rem]">
+            Sua empresa no <span className="text-gold">regime certo</span>, sem
+            dor de cabeça com o fisco
           </h1>
 
-          <p className="mt-6 max-w-lg text-[18px] leading-relaxed text-slate">
+          <p className="mt-7 max-w-lg text-[18px] leading-relaxed text-white/72">
             {hero.subheadline}
           </p>
 
@@ -32,31 +29,16 @@ export function Hero() {
             </WhatsAppCta>
             <a
               href="#contato"
-              className="inline-flex h-[52px] items-center justify-center rounded-btn border-[1.5px] border-ink bg-white px-8 text-[17px] font-medium tracking-tight text-ink transition-transform hover:bg-cream-lifted active:scale-[0.97]"
+              className="inline-flex h-[52px] items-center justify-center rounded-full border border-white/80 px-8 text-[17px] font-semibold tracking-ui text-white transition-transform hover:bg-white/10 active:scale-[0.97]"
             >
               {hero.ctaSecondary}
             </a>
           </div>
         </div>
 
-        {/* direita: foto em moldura stadium + arco + portrait circular */}
+        {/* direita: foto full-bleed em moldura rounded-xl */}
         <div className="relative animate-fade-up">
-          {/* arco orbital dourado (assinatura Mastercard) */}
-          <svg
-            aria-hidden
-            className="pointer-events-none absolute -top-8 right-0 hidden h-36 w-64 text-gold sm:block"
-            viewBox="0 0 300 160"
-            fill="none"
-          >
-            <path
-              d="M2 158 C 40 40, 180 -10, 298 60"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-
-          <div className="relative overflow-hidden rounded-stadium shadow-card">
+          <div className="relative overflow-hidden rounded-xl">
             <div className="relative aspect-[5/4]">
               <Image
                 src={images.hero.src}
@@ -69,19 +51,13 @@ export function Hero() {
             </div>
           </div>
 
-          {/* portrait circular com a nota do Google + satélite */}
-          <div className="absolute -bottom-5 -left-3 grid h-28 w-28 place-items-center rounded-pill border-[6px] border-cream bg-ink text-center sm:-left-5 sm:h-32 sm:w-32">
-            <div>
-              <span className="tnum block font-display text-3xl text-gold">
-                {business.google.rating}
-              </span>
-              <span className="block text-[11px] leading-tight text-cream/70">
-                no Google
-              </span>
-            </div>
-            <span className="absolute -right-1 -top-1 grid h-9 w-9 place-items-center rounded-pill border-2 border-cream bg-gold">
-              <Star className="h-4 w-4 fill-ink text-ink" aria-hidden />
+          {/* selo discreto da nota do Google */}
+          <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-canvas-dark/85 px-4 py-2 backdrop-blur-md">
+            <Star className="h-4 w-4 fill-gold text-gold" aria-hidden />
+            <span className="tnum text-[15px] font-semibold text-white">
+              {business.google.rating}
             </span>
+            <span className="text-[13px] text-white/60">no Google</span>
           </div>
         </div>
       </div>

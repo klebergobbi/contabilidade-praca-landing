@@ -11,27 +11,31 @@ const config: Config = {
       center: true,
       padding: {
         DEFAULT: "1.5rem",
-        lg: "3rem",
+        lg: "2.5rem",
       },
       screens: {
-        "2xl": "1280px",
+        "2xl": "1240px",
       },
     },
     extend: {
       colors: {
-        // Superfícies quentes (modelo Mastercard): nunca branco puro
-        cream: {
-          DEFAULT: "#F3F0EE", // canvas
-          lifted: "#FCFBFA", // superfície elevada
-          ghost: "#E8E2DA", // watermark creme-sobre-creme
+        // Sistema de duas faixas (modelo Revolut)
+        canvas: {
+          dark: "#000000", // true black, storytelling
+          light: "#FFFFFF", // catálogo
         },
-        // Near-black quente para CTAs, texto e rodapé
+        surface: {
+          soft: "#F4F4F4", // off-white em faixas claras
+          deep: "#0A0A0A", // inset escuro
+          elevated: "#16181A", // card escuro luminoso
+        },
         ink: {
-          DEFAULT: "#141413",
-          soft: "#262627",
+          DEFAULT: "#191C1F", // texto em faixa clara
+          body: "#1F2226",
+          mute: "#505A63", // secundário
+          stone: "#8D969E", // metadados
         },
-        slate: "#696969", // texto secundário muted
-        // Dourado da marca — ocupa o papel do acento (dots, arcos, indicadores)
+        // Dourado da marca: o "carimbo" de acento (escasso), no papel do cobalt
         gold: {
           DEFAULT: "#F7BA2D",
           50: "#FEF7E2",
@@ -48,30 +52,25 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "Sofia Sans", "system-ui", "sans-serif"],
-        display: ["var(--font-sans)", "Sofia Sans", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
       },
       letterSpacing: {
-        // headlines editoriais Mastercard: -2%
-        tightest: "-0.03em",
-        tighter: "-0.02em",
+        // display Revolut: tracking negativo, aumenta com o tamanho
+        tightest: "-0.035em",
+        tighter: "-0.025em",
         tight: "-0.015em",
-        eyebrow: "0.04em", // +4% nas eyebrows uppercase
+        ui: "0.015em", // leve positivo nos labels (precisão fintech)
       },
       borderRadius: {
-        btn: "20px", // CTAs do corpo (raio assinatura)
-        stadium: "40px", // molduras de mídia / containers grandes
-        pill: "999px", // pílulas, nav, chips
-      },
-      boxShadow: {
-        // sombras atmosféricas (spread largo, baixa opacidade)
-        navpill: "0 4px 24px 0 rgba(0, 0, 0, 0.05)",
-        card: "0 24px 48px 0 rgba(0, 0, 0, 0.08)",
-        feature: "0 40px 90px 0 rgba(0, 0, 0, 0.18)",
+        sm: "8px",
+        md: "12px",
+        lg: "20px",
+        xl: "28px",
       },
       keyframes: {
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(14px)" },
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "pulse-ring": {
