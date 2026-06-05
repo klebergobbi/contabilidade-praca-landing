@@ -3,15 +3,15 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base font-semibold tracking-tight transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold disabled:pointer-events-none disabled:opacity-60 active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-base font-semibold tracking-tight transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold disabled:pointer-events-none disabled:opacity-60 active:scale-[0.98]",
   {
     variants: {
       variant: {
         whatsapp:
           "bg-whatsapp text-white shadow-whatsapp hover:bg-whatsapp-dark",
-        gold: "bg-gold text-graphite-900 shadow-gold hover:bg-gold-400",
+        gold: "bg-gold text-graphite-900 shadow-gold hover:bg-gold-600",
         outline:
-          "border border-graphite-700/20 bg-white text-graphite-900 hover:bg-cloud",
+          "border border-graphite-600/30 bg-white text-graphite-900 hover:bg-cloud",
         ghost: "text-graphite-900 hover:bg-cloud",
       },
       size: {

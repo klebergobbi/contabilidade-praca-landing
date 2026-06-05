@@ -44,7 +44,7 @@ export function Hero() {
             </WhatsAppCta>
             <a
               href="#contato"
-              className="inline-flex h-14 items-center justify-center rounded-full border border-white/15 px-8 text-lg font-semibold tracking-tight text-white transition-colors hover:border-gold hover:text-gold"
+              className="inline-flex h-14 items-center justify-center rounded-lg border border-graphite-600 px-8 text-lg font-semibold tracking-tight text-white transition-colors hover:border-gold hover:text-gold"
             >
               {hero.ctaSecondary}
             </a>
@@ -63,7 +63,7 @@ export function Hero() {
         {/* foto real + badge flutuante de prova social */}
         <div className="animate-fade-up">
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-soft">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-graphite-600 shadow-soft">
               <Image
                 src={images.hero.src}
                 alt={images.hero.alt}
@@ -80,7 +80,7 @@ export function Hero() {
             </div>
 
             {/* badge Google flutuante */}
-            <div className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-white/10 bg-graphite-800/95 px-5 py-4 shadow-soft backdrop-blur sm:-left-5">
+            <div className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-xl border border-graphite-600 bg-graphite-700/95 px-5 py-4 shadow-soft backdrop-blur sm:-left-5">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold/15">
                 <Star className="h-6 w-6 fill-gold text-gold" aria-hidden />
               </span>

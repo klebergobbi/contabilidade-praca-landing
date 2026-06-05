@@ -15,7 +15,7 @@ export function Process() {
           {process.steps.map((step) => (
             <li
               key={step.number}
-              className="relative rounded-2xl border border-white/10 bg-graphite-800/60 p-7"
+              className="relative rounded-xl border border-graphite-600 bg-graphite-700/70 p-7"
             >
               <span className="tnum font-display text-4xl font-bold tracking-tight text-gold/40">
                 {step.number}

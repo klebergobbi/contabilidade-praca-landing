@@ -20,24 +20,27 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Marca
+        // Marca — dourado amostrado do Instagram (#F7BA2D), modelo Binance
         gold: {
-          DEFAULT: "#F2B705",
-          50: "#FEF8E0",
-          100: "#FCEDB0",
-          400: "#F5C534",
-          500: "#F2B705",
-          600: "#C99700",
+          DEFAULT: "#F7BA2D",
+          50: "#FEF7E2",
+          100: "#FDEBB4",
+          400: "#FBCB3A", // realce mais claro (voltagem)
+          500: "#F7BA2D", // dourado da marca
+          600: "#F0B90B", // estado active/hover (mais profundo)
+          700: "#C99100",
         },
+        // Superfícies near-black (modelo Binance)
         graphite: {
-          DEFAULT: "#0E1116",
-          900: "#0E1116",
-          800: "#141922",
-          700: "#1A1F26",
+          DEFAULT: "#0B0E11",
+          900: "#0B0E11", // canvas escuro
+          800: "#181A20", // ink / base
+          700: "#1E2329", // card escuro
+          600: "#2B3139", // superfície elevada / hairline
         },
         // Neutros
-        cloud: "#F5F6F8",
-        cream: "#FBF4E2", // interlúdio quente (modelo Stripe), em tom dourado
+        cloud: "#FAFAFA", // surface-soft-light (Binance)
+        cream: "#F5F5F5", // surface-strong-light (Binance)
         ink: "#4A4F57",
         // CTA
         whatsapp: {
@@ -56,8 +59,8 @@ const config: Config = {
         tight: "-0.02em",
       },
       boxShadow: {
-        soft: "0 4px 24px -8px rgba(14, 17, 22, 0.12)",
-        gold: "0 8px 30px -8px rgba(242, 183, 5, 0.45)",
+        soft: "0 4px 24px -8px rgba(11, 14, 17, 0.14)",
+        gold: "0 8px 30px -8px rgba(247, 186, 45, 0.5)",
         whatsapp: "0 8px 30px -6px rgba(37, 211, 102, 0.5)",
       },
       borderRadius: {

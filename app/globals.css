@@ -8,21 +8,15 @@
     -webkit-text-size-adjust: 100%;
   }
 
-  body {
-    @apply bg-white text-graphite-900 antialiased;
-    text-rendering: optimizeLegibility;
-    /* assinatura tipográfica do modelo (Stripe): stylistic set ss01 global */
-    font-feature-settings: "ss01";
-  }
-
-  /* display = peso firme + tracking negativo (premium fintech) */
+  /* display = peso firme + tracking negativo (modelo Binance:
+     "confia no tamanho e na voltagem do amarelo, não no peso") */
   .font-display {
     letter-spacing: -0.02em;
   }
 
-  /* figuras tabulares para números/dados — o "DNA contábil" do modelo */
+  /* figuras tabulares para números/dados — DNA financeiro */
   .tnum {
-    font-feature-settings: "tnum", "ss01";
+    font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
   }
 
